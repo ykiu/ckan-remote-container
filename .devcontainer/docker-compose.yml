@@ -14,6 +14,7 @@ services:
     container_name: ckan_devcontainer_ckan
     build:
       context: ../ckan/
+    command: sleep infinity
     links:
       - db
       - solr
@@ -57,7 +58,7 @@ services:
     container_name: ckan_devcontainer_${POSTGRES_HOST}
     build:
       context: ../ckan/
-      dockerfile: contrib/docker/postgresql/Dockerfile  
+      dockerfile: contrib/docker/postgresql/Dockerfile
     environment:
       - DS_RO_PASS=${DATASTORE_READONLY_PASSWORD}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

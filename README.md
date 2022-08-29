@@ -27,3 +27,11 @@ code <プロジェクトルートのパス>
 > Folder contains a Dev Container configuration file.
 
 と表示されるので、"Reopen in Container" をクリックする。VS Code が再起動し、CKAN のコンテナ内のファイルを VS Code 上から編集できるようになる。
+
+CKAN のアプリケーションを起動するには VS Code のターミナルから
+
+```bash
+ckan -c /etc/ckan/production.ini run --host 0.0.0.0
+```
+
+を実行する。ホスト側から http://localhost:5000 でアクセスできるようになる。
